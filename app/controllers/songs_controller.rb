@@ -3,7 +3,7 @@ require 'rack-flash'
 
 class SongsController < ApplicationController
 
-  enable :session
+  enable :sessions
   use Rack::Flash
 
   get '/songs/:slug/edit' do
