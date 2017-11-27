@@ -120,7 +120,6 @@ describe "Song Forms" do
       end
 
       it "updates the song's genres" do
-        binding.pry
 
         uncheck "Hippity Hop"
         check "New Age Garbage"
