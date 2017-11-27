@@ -14,8 +14,8 @@ class SongsController < ApplicationController
 
   post '/songs/:slug' do
     @song = Song.find_by_slug(params[:slug])
-    @song.artist = Artist.create_or_find_by(name: params[:songs]["artist_name"])
-    @song.genre_ids = params[:songs]["genre_ids"]
+    @song.artist = Artist.create_or_find_by(name: params[:song]["artist_name"])
+    @song.genre_ids = params[:song]["genre_ids"]
     @song.save
 
     flash[:message] = "Successfully updated song."
