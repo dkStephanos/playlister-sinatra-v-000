@@ -24,7 +24,8 @@ class SongsController < ApplicationController
   end
 
   get '/songs/new' do
-
+    @artists = Artist.all
+    erb :'/songs/new'
   end
 
   get '/songs/:slug' do
